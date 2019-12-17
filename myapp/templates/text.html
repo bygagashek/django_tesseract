@@ -1,0 +1,12 @@
+{% extends "list.html" %}
+
+{% block content %}
+    {% if value  %}
+      {% for document in value %}
+                <p>{{ document }}</p>
+      {% endfor %}
+    {% endif %}
+    <form action="download_file">
+    <button type="submit">скачать файл</button>
+    </form>
+{% endblock %}
